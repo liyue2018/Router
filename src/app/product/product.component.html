@@ -1,0 +1,15 @@
+<h3>这里是商品详情页</h3>
+<p>
+  商品信息将在这里展示。
+</p>
+<p>这个商品ID是：{{ productId }}</p>
+
+<hr>
+<p>以下内容是为了演示子路由</p>
+<p>
+    <a [routerLink]="['./']">商品描述</a>
+    <a [routerLink]="['./seller',9]">销售员信息</a>
+</p>
+
+<router-outlet></router-outlet>
+

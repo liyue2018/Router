@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { Notfound404Component } from './notfound404/notfound404.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { ProductDescComponent } from './product-desc/product-desc.component';
+import { SellerComponent } from './seller/seller.component';
+import { TalkComponent } from './talk/talk.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
+  { path: 'talk', component: TalkComponent, outlet:'aux'},
+  { path: 'product/:id', component: ProductComponent,
+    children: [
+        { path: '', component: ProductDescComponent},
+        { path: 'seller/:id', component: SellerComponent}
+    ]
+},
+  { path: 'contact', component: ContactComponent},
+  { path: 'about', component: AboutComponent},
+  { path: '**', component: Notfound404Component}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

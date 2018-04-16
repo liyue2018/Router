@@ -1,0 +1,23 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-04-15 10:11:41
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-04-16 10:00:16
+*/
+.btn-router,.btn-input {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 3px 14px;
+    border: 1px solid #f00;
+    color: #333;
+    text-decoration: none;
+}
+.btn-input{
+    font-size: 16px;
+}
+.btn-router:hover,
+.btn-input:hover {
+    background: #a58;
+    color:  #fff;
+    border-color: #a58;
+}
