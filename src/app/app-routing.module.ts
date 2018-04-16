@@ -15,7 +15,7 @@ import { ProductResolve } from './guard/product.resolve';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent, canDeactivate:[UnsavedGuard]},
   { path: 'talk', component: TalkComponent, outlet:'aux'},
   { path: 'product/:id', component: ProductComponent,
     children: [
