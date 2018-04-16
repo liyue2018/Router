@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+     private productId: number;
+    private productName: string;
 
-  constructor() { }
+  constructor(private routeInfo: ActivatedRoute) { }
 
   ngOnInit() {
+
   }
 
 }
